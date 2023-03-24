@@ -48,8 +48,7 @@ namespace Search_Dropdown_Test
         {
             cboMenu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             cboMenu.AutoCompleteSource = AutoCompleteSource.ListItems;
-            picMainImg.Dock = DockStyle.Fill;
-            picMainImg.Visible = true;
+
 
             //test
 
@@ -296,15 +295,15 @@ namespace Search_Dropdown_Test
 
             if (!check) myTabControl1.AddForm(FormMdi);
 
-            if (myTabControl1.TabPages.Count == 1)
-            {
-                //로그인 했을때 TabPage 이미지 바뀜
-                myTabControl1.Dock = DockStyle.Fill;
-                myTabControl1.BringToFront();
-                picMainImg.Dock = DockStyle.None;
-                picMainImg.Visible = false;
-                picMainImg.SendToBack();
-            }
+            //if (myTabControl1.TabPages.Count == 1)
+            //{
+            //    //로그인 했을때 TabPage 이미지 바뀜
+            //    myTabControl1.Dock = DockStyle.Fill;
+            //    myTabControl1.BringToFront();
+            //    picMainImg.Dock = DockStyle.None;
+            //    picMainImg.Visible = false;
+            //    picMainImg.SendToBack();
+            //}
 
             stsFormName.Text = myTabControl1.SelectedTab.Text;
         }
@@ -349,7 +348,6 @@ namespace Search_Dropdown_Test
             // 닫기 버튼 클릭 시 활성화 되어 있는 페이지 닫기
             myTabControl1.SelectedTab.Dispose();
 
-            if (myTabControl1.TabPages.Count == 0) mainImageClose();
 
             stsFormName.Text = "";
 
@@ -535,8 +533,7 @@ namespace Search_Dropdown_Test
             gboBeforeLogin.Visible = true;
             //gboAfterLogin.Visible= false;
 
-            // 그리드 칸 이미지 셋팅
-            mainImageClose();
+         
 
             #endregion
 
@@ -601,14 +598,14 @@ namespace Search_Dropdown_Test
         #endregion
 
         #region < 메인이미지 숨김 이벤트 >
-        private void mainImageClose()
-        {
-            picMainImg.Dock = DockStyle.Fill;
-            picMainImg.Visible = true;
-            picMainImg.BringToFront();
-            myTabControl1.Dock = DockStyle.None;
-            myTabControl1.SendToBack();
-        }
+        //private void mainImageClose()
+        //{
+        //    picMainImg.Dock = DockStyle.Fill;
+        //    picMainImg.Visible = true;
+        //    picMainImg.BringToFront();
+        //    myTabControl1.Dock = DockStyle.None;
+        //    myTabControl1.SendToBack();
+        //}
 
         #endregion
 

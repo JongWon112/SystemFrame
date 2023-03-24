@@ -72,7 +72,6 @@
             this.stsFormName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.stsTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.picMainImg = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.myTabControl1 = new Assemble.MyTabControl();
             this.ultraSchedulePrintDocument1 = new Infragistics.Win.UltraWinSchedule.UltraSchedulePrintDocument(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gboBeforeLogin)).BeginInit();
@@ -471,15 +470,6 @@
             this.stsTime.Size = new System.Drawing.Size(150, 17);
             this.stsTime.Text = "타임";
             // 
-            // picMainImg
-            // 
-            this.picMainImg.BorderShadowColor = System.Drawing.Color.Empty;
-            this.picMainImg.Image = ((object)(resources.GetObject("picMainImg.Image")));
-            this.picMainImg.Location = new System.Drawing.Point(559, 415);
-            this.picMainImg.Name = "picMainImg";
-            this.picMainImg.Size = new System.Drawing.Size(100, 50);
-            this.picMainImg.TabIndex = 9;
-            // 
             // myTabControl1
             // 
             this.myTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -495,7 +485,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1320, 616);
-            this.Controls.Add(this.picMainImg);
             this.Controls.Add(this.status);
             this.Controls.Add(this.myTabControl1);
             this.Controls.Add(this.ultraGroupBox4);
@@ -569,7 +558,6 @@
         private System.Windows.Forms.ToolStripStatusLabel stsTime;
         private Infragistics.Win.Misc.UltraButton btnUserInfo;
         private System.Windows.Forms.ToolStripStatusLabel stsUserId;
-        private Infragistics.Win.UltraWinEditors.UltraPictureBox picMainImg;
         private System.Windows.Forms.ToolStripStatusLabel stsFormName;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private Infragistics.Win.UltraWinSchedule.UltraSchedulePrintDocument ultraSchedulePrintDocument1;
