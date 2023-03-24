@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA7E8E8D-089B-44D1-9C93-2EA55DA0439C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Search_Dropdown_Test</RootNamespace>
+    <AssemblyName>Search_Dropdown_Test</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DC00_assm">
+      <HintPath>..\Assembly\bin\Debug\DC00_assm.dll</HintPath>
+    </Reference>
+    <Reference Include="DC00_Component">
+      <HintPath>..\Assembly\bin\Debug\DC00_Component.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinCalcManager.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinChart.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinDock.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.DocumentExport.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2011.1\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.DocumentExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2011.1\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics3.Win.UltraWinGrid.ExcelExport.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbhelper_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbhelper_Test.Designer.cs">
+      <DependentUpon>dbhelper_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dbhelper_Test.resx">
+      <DependentUpon>dbhelper_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ActiveGroupChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ActiveGroupChangingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ActiveItemChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ActiveItemChangingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.BetweenTextAndImageUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableContextMenuInitializingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableGroupEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableGroupExitingEditModeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableItemEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableItemExitingEditModeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableNavigationContextMenuInitializingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.CancelableNavigationOptionsDialogDisplayingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ContextMenuInitializingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.DesignerDialog.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ExpansionButtonUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.FlyoutResizeHandleUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupAddingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupCollapsedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupCollapsingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDraggingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDragOverEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDragOverEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDropHighlightUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDroppedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupDroppedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupEnteredEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupEnteringEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupExitedEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupExitingEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupExpandedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupExpandingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupExpansionIndicatorUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupRemovingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupsItemsTypeEditor.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.GroupUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemAddingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemAreaInnerUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemAreaMiddleUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemAreaOuterUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemCheckStateChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemCheckStateChangingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemConstituentUIElementBase.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDoubleClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDraggingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDragOverEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDragOverEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDropHighlightUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDroppedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemDroppedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemEnteredEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemEnteringEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemExitedEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemExitingEditModeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemImageAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemRemovingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemTextAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ItemUIElementBase.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.ListbarScrollButtonUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationContextMenuInitializingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationGroupHeaderAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationOptionsDialogDisplayingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationOverflowButtonAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationOverflowButtonImageUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationOverflowButtonUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationOverflowQuickCustomizeButtonUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneCollapsedGroupAreaUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneCollapsingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneCollapsingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneExpandedStateChangingEventArgsBase.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneExpandingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneExpandingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneExpansionButtonUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutClosedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutClosedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutContainerControl.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutContainerControlUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutDisplayingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneFlyoutDisplayingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationPaneOptionsDialog.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.NavigationSplitterBarUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.OpenInNewWindowEventArgs.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.OpenInNewWindowEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.Resources.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.SelectedGroupChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.SelectedGroupChangingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.SeparatorUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.Serialization.Binder.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBar+UltraExplorerBarApplicationSettings.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBar.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarContainerControl.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarEmbeddableEditorOwner.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarEventManager.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup+ExplorerBarGroupAccessibleObject.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup+NavigationOverFlowButtonAccessibleObject.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup+NavigationPaneHeaderAccessibleObject.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup+UltraExplorerBarGroupTypeConverter.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupAppearances.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupHeaderUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupsCollection+UltraExplorerBarGroupEnumerator.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupsCollection.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupSettings.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroupSettingsResolved.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem+ExplorerBarItemAccessibleObject.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem+UltraExplorerBarItemTypeConverter.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItemAppearances.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItemsCollection+UltraExplorerBarItemEnumerator.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItemsCollection.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItemSettings.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItemSettingsResolved.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarKeyActionMapping.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarKeyActionMappingsCollection+UltraExplorerBarKeyActionMappingEnumerator.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarKeyActionMappingsCollection.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarRole.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarSettingsBase.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarStreamer.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarUIElement.datasource" />
+    <None Include="Properties\DataSources\Infragistics.Win.UltraWinExplorerBar.UltraWinExplorerBarAssemblyStyleInfo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assembly\Assemble.csproj">
+      <Project>{3e426a15-2f5c-4374-a6bb-6e3b5567aac0}</Project>
+      <Name>Assemble</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Form_List\Form_List.csproj">
+      <Project>{58acf76c-a6e6-4b3b-8c6b-50409521b305}</Project>
+      <Name>Form_List</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabClose1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabClose1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabClose2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
