@@ -200,6 +200,8 @@ namespace Search_Dropdown_Test
             helper = new DBHelper();
             try
             {
+                //로그인 사용자의 권한이 있는 메뉴 Key,Value 값을 가져온다.
+                
                 helper.SPSet_Select("S1_TB_MENULIST_USER");
                 helper.SelectParameter("@USERID", Common.userId);
                 helper.SelectParameter("@USERAUTH", Common.userAutority);
@@ -214,22 +216,22 @@ namespace Search_Dropdown_Test
                 {
                     key = Convert.ToString(dtRow["MENU_KEY"]);
                     value = Convert.ToString(dtRow["MENU_NAME"]);
-                    //구성할 메뉴가 메뉴그룹인지 메뉴 아이템인지 확인
+                    //구성할 메뉴가 상위메뉴인지 하위 메뉴인지 확인
                     if (dtRow["MENU_ID"].ToString() == dtRow["PARENT_ID"].ToString())
                     {
-                        //메뉴 그룹으로 구성
-                        
+                        //상위 메뉴 그룹으로 구성
                         menus.Groups.Add(key, value);
                         groupText = key;
                         continue;
                     }
 
+                    // 하위 메뉴로 구성
                     menus.Groups[groupText].Items.Add(key, value);
 
                 }
 
 
-                //메뉴검색 콤보박스 세팅
+                //사용 가능한 메뉴 검색 콤보박스 세팅
                 SetMenuSearch();
 
             }
