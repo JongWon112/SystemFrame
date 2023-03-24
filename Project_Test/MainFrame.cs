@@ -270,7 +270,7 @@ namespace Search_Dropdown_Test
         {
 
             
-
+            //Form 리스트를 로드
             System.Reflection.Assembly assembly = System.Reflection.Assembly.LoadFrom($"{Application.StartupPath}\\Form_List.DLL");
 
             //클릭한 메뉴의 CS 파일 타입 확인
@@ -285,6 +285,7 @@ namespace Search_Dropdown_Test
 
             foreach (TabPage page in myTabControl1.TabPages)
             {
+                //클릭한 메뉴가 이미 열려있는 메뉴면 탭페이지 선택 변경
                 if (page.Name == menuName)
                 {
                     check = true;
@@ -293,17 +294,8 @@ namespace Search_Dropdown_Test
                 }
             }
 
+            //열려있지않은 메뉴 탭페이지에 오픈
             if (!check) myTabControl1.AddForm(FormMdi);
-
-            //if (myTabControl1.TabPages.Count == 1)
-            //{
-            //    //로그인 했을때 TabPage 이미지 바뀜
-            //    myTabControl1.Dock = DockStyle.Fill;
-            //    myTabControl1.BringToFront();
-            //    picMainImg.Dock = DockStyle.None;
-            //    picMainImg.Visible = false;
-            //    picMainImg.SendToBack();
-            //}
 
             stsFormName.Text = myTabControl1.SelectedTab.Text;
         }

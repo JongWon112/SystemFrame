@@ -9,11 +9,7 @@ namespace Assemble
 {
     public class MyTabControl : TabControl
     {
-        //생성자
-        public MyTabControl() 
-        {            //this.DrawMode = TabDrawMode.OwnerDrawFixed;
 
-        }
         public void AddForm(Form NewForm)
         {
             if (NewForm == null) return; //인자로 받는 폼이 없을경우  실행 중지.
