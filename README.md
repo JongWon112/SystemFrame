@@ -70,20 +70,71 @@ winform 기반 Infragistic 상용 컴포넌트를 사용한 시스템 프레임 
 
  - 화면
  
-![메인화면](https://raw.githubusercontent.com/JongWon112/studyASPNET/main/images/html_screen01.png)
+![메인화면](https://github.com/JongWon112/SystemFrame/blob/main/images/main.png)
 메인화면
-![라이트박스화면](https://github.com/JongWon112/studyASPNET/blob/main/images/html_screen03.png?raw=true)
-라이트박스화면
+![폼 오픈](https://github.com/JongWon112/SystemFrame/blob/main/images/FormOpen.png)
+폼 오픈 화면
 
 
+## 2. 로그인 권한 별 메뉴 구성
+ - Source
+<pre>
+<code>
+   #region < 권한 별 메뉴 구성 >
+            //1. 그룹 구성
+            // 로그인 유저 별 메뉴 가져오기
+            helper = new DBHelper();
+            try
+            {
+                //로그인 사용자의 권한이 있는 메뉴 Key,Value 값을 가져온다.
+                
+                helper.SPSet_Select("S1_TB_MENULIST_USER");
+                helper.SelectParameter("@USERID", Common.userId);
+                helper.SelectParameter("@USERAUTH", Common.userAutority);
+                DataTable dtTemp = helper.SPRun_Select();
 
-1. 웹 기반기술 총복습
-   - 핀터레스트 스타일 프론트엔드 연습
-   - [소스](https://github.com/JongWon112/studyASPNET/tree/main/Day04/FrontendExec/Pages)
-2. 결과화면
+                string groupText = "";
+                string key = "";
+                string value = "";
+                //가져온 메뉴 구성하기
+                
+                foreach(DataRow dtRow in dtTemp.Rows)
+                {
+                    key = Convert.ToString(dtRow["MENU_KEY"]);
+                    value = Convert.ToString(dtRow["MENU_NAME"]);
+                    //구성할 메뉴가 상위메뉴인지 하위 메뉴인지 확인
+                    if (dtRow["MENU_ID"].ToString() == dtRow["PARENT_ID"].ToString())
+                    {
+                        //상위 메뉴 그룹으로 구성
+                        menus.Groups.Add(key, value);
+                        groupText = key;
+                        continue;
+                    }
+
+                    // 하위 메뉴로 구성
+                    menus.Groups[groupText].Items.Add(key, value);
+
+                }
 
 
-![메인화면](https://raw.githubusercontent.com/JongWon112/studyASPNET/main/images/html_screen01.png)
-메인화면
-![라이트박스화면](https://github.com/JongWon112/studyASPNET/blob/main/images/html_screen03.png?raw=true)
-라이트박스화면
+                //사용 가능한 메뉴 검색 콤보박스 세팅
+                SetMenuSearch();
+
+            }
+            catch(Exception ex)
+            {
+                ShowMsg("메뉴 구성에 실패하였습니다." + ex.ToString());
+            }
+            finally { helper.Close(); }
+
+            #endregion
+
+</code>
+</pre>
+
+ - 화면
+ 
+![사용자별 메뉴](https://github.com/JongWon112/SystemFrame/blob/main/images/Authority.png)
+사용자별 메뉴
+![사용자별 메뉴 조회](https://github.com/JongWon112/SystemFrame/blob/main/images/Authority_Table.png)
+사용자별 메뉴 조회
