@@ -136,5 +136,6 @@ winform 기반 Infragistic 상용 컴포넌트를 사용한 시스템 프레임 
  
 ![사용자별 메뉴](https://github.com/JongWon112/SystemFrame/blob/main/images/Authority.png)
 사용자별 메뉴
+<br>
 ![사용자별 메뉴 조회](https://github.com/JongWon112/SystemFrame/blob/main/images/Authority_Table.png)
 사용자별 메뉴 조회
